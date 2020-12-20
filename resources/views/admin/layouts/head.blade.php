@@ -42,7 +42,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
 	<!-- Volt CSS -->
-	<link type="text/css" href="{{'css/volt.css'}}" rel="stylesheet">
+	<link type="text/css" href="{{ asset('css/volt.css') }}" rel="stylesheet">
 
 	{{-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers --}}
 

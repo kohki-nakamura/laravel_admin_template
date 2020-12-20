@@ -29,6 +29,15 @@
 					<span class="mt-1">ユーザー一覧</span>
 				</a>
 			</li>
+			<li class="nav-item">
+				<div class="nav-link d-flex align-items-center">
+					<form method="post" action="{{ url('admin/logout') }}" id="logout">
+						@csrf
+						<span class="sidebar-icon"><span class="fas fa-sign-out-alt"></span></span>
+						<span onclick='document.getElementById("logout").submit()'>サインアウト</span>
+					</form>
+				</div>
+			</li>
 			<li class="nav-item ">
 			<a href="../../pages/transactions.html" class="nav-link">
 					<span class="sidebar-icon"><span class="fas fa-hand-holding-usd"></span></span>

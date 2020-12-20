@@ -27,7 +27,7 @@ Route::group(['middleware' => ['auth.admin']], function () {
 	Route::resource('users', 'admin\UserController', ['only' => ['index', 'show']]);
 
 	//ログアウト実行
-	Route::post('/admin/logout', 'admin\AdminLogoutController@logout');
+	Route::post('/admin/logout', 'admin\LogoutController@logout');
 });
 
 //管理側ログイン

@@ -31,5 +31,5 @@ Route::group(['middleware' => ['auth.admin']], function () {
 });
 
 //管理側ログイン
-Route::get('/admin/login', 'admin\AdminLoginController@showLoginform');
-Route::post('/admin/login', 'admin\AdminLoginController@login');
+Route::get('/admin/login', 'admin\LoginController@showLoginform');
+Route::post('/admin/login', 'admin\LoginController@login');

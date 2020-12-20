@@ -2,11 +2,11 @@
 namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-class AdminLoginController extends Controller
+class LoginController extends Controller
 {
 
 	function showLoginForm(){
-		return view("admin.admin_login");
+		return view("admin.auth.login");
 	}
 
 	function login(Request $request){

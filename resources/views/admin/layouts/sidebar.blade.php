@@ -18,10 +18,16 @@
 	</div>
 	<ul class="nav flex-column">
 			<li class="nav-item  active ">
-			<a href="../../pages/dashboard/dashboard.html" class="nav-link">
+			<a href="{{ action('admin\TopController@show') }}" class="nav-link">
 					<span class="sidebar-icon"><span class="fas fa-chart-pie"></span></span>
-					<span>Overview</span>
+					<span>ダッシュボード</span>
 			</a>
+			</li>
+			<li class="nav-item ">
+				<a href="{{ action('admin\UserController@index') }}" class="nav-link d-flex align-items-center">
+					<span class="sidebar-icon"><span class="fas fa-user"></span></span>
+					<span class="mt-1">ユーザー一覧</span>
+				</a>
 			</li>
 			<li class="nav-item ">
 			<a href="../../pages/transactions.html" class="nav-link">

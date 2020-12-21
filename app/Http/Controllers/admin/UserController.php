@@ -6,9 +6,9 @@ use App\Models\User;
 class UserController extends Controller
 {
 	function index(){
-		$user_list = User::orderBy("id", "desc")->paginate(10);
+		$users = User::orderBy("id", "desc")->paginate(10);
 		return view("admin.users.index", [
-			"user_list" => $user_list
+			"users" => $users
 		]);
 	}
 	function show($id){

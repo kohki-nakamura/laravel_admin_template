@@ -62,7 +62,7 @@
 										<td>{{ $user->id }}</td>
 										<td>{{ $user->name }}</td>
 										<td>{{ $user->email }}</td>
-										<td><a href="{{ url('admin/user/' . $user->id) }}" class="btn btn-info m-r-5"><span class="fa fa-info"></span> 詳細</a></td>
+										<td><a href="{{ action('admin\UserController@show', $user->id) }}" class="btn btn-info m-r-5"><span class="fa fa-info"></span> 詳細</a></td>
 										<td><a href="#" class="btn btn-success m-r-5"><span class="fa fa-edit"></span> 編集</a></td>
 										<td><a href="#" class="btn btn-danger m-r-5"><span class="fa fa-trash"></span> 削除</a></td>
 								</tr>

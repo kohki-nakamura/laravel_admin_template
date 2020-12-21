@@ -36,6 +36,6 @@
 			</tbody>
 		</table>
 	</div>
-	<td><a href="{{ url('admin/user') }}" class="btn btn-gray m-r-5"><span class="fa fa-arrow-alt-circle-left"></span> 戻る</a></td>
+	<td><a href="{{ action('admin\UserController@index') }}" class="btn btn-gray m-r-5"><span class="fa fa-arrow-alt-circle-left"></span> 戻る</a></td>
 	<td><a href="#" class="btn btn-success m-r-5"><span class="fa fa-edit"></span> 編集</a></td>
 @endsection​

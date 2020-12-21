@@ -3,7 +3,7 @@
 	<div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
 			<div class="d-flex align-items-center">
 			<div class="user-avatar lg-avatar mr-4">
-					<img src="{{'images/team/profile-picture-3.jpg'}}" class="card-img-top rounded-circle border-white" alt="Bonnie Green">
+					<img src="{{ asset('images/team/profile-picture-3.jpg') }}" class="card-img-top rounded-circle border-white" alt="Bonnie Green">
 			</div>
 			<div class="d-block">
 					<h2 class="h6">Hi, Jane</h2>
@@ -106,7 +106,7 @@
 			<li class="nav-item">
 			<a href="../../index.html" class="nav-link d-flex align-items-center">
 					<span class="sidebar-icon">
-					<img src="{{'images/brand/light.svg'}}" height="20" width="20" alt="Volt Logo">
+					<img src="{{ asset('images/brand/light.svg') }}" height="20" width="20" alt="Volt Logo">
 					</span>
 					<span class="mt-1">Volt Overview</span>
 			</a>
@@ -120,7 +120,7 @@
 			<li class="nav-item">
 			<a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
 					<span class="sidebar-icon">
-					<img src="{{'images/themesberg.svg'}}" height="20" width="20" alt="Themesberg Logo">
+					<img src="{{ asset('images/themesberg.svg') }}" height="20" width="20" alt="Themesberg Logo">
 					</span>
 					<span>Themesberg</span>
 			</a>

@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="card">
 		<div class="card-header">
-			<a href="{{ url('admin/user_list') }}">ユーザー一覧</a> &gt; ユーザー詳細
+			<a href="{{ url('admin/index') }}">ユーザー一覧</a> &gt; ユーザー詳細
 		</div>
 		<div class="card-body">
 

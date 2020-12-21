@@ -26,6 +26,7 @@
 	@include('admin.layouts.sidebar')
 
 	<main class="content">
+		@include('admin.layouts.searchbar')
 		@yield('content')
 		@include('admin.layouts.footer')
 	</main>

@@ -24,11 +24,11 @@
 	<meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-bootstrap-5-dashboard/volt-bootstrap-5-dashboard-preview.jpg">
 
 	<!-- Favicon -->
-	<link rel="apple-touch-icon" sizes="120x120" href="{{'images/favicon/apple-touch-icon.png'}}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{'images/favicon/favicon-32x32.png'}}">
-	<link rel="icon" type="image/png" sizes="16x16" href="{{'images/favicon/favicon-16x16.png'}}">
-	<link rel="manifest" href="{{'images/favicon/site.webmanifest'}}">
-	<link rel="mask-icon" href="{{'images/favicon/safari-pinned-tab.svg'}}" color="#ffffff">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png') }}">
+	<link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}">
+	<link rel="mask-icon" href="{{ asset('images/favicon/safari-pinned-tab.svg') }}" color="#ffffff">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="theme-color" content="#ffffff">
 

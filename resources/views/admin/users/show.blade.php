@@ -1,20 +1,41 @@
-@extends('layouts.admin')
+@extends('admin.layouts.template')
 
 @section('content')
-<div class="container">
-	<div class="card">
-		<div class="card-header">
-			<a href="{{ url('admin/index') }}">ユーザー一覧</a> &gt; ユーザー詳細
-		</div>
-		<div class="card-body">
-
-			<ul class="list-group">
-				<li class="list-group-item">名前: {{ $user->name }}</li>
-				<li class="list-group-item">メール: {{ $user->email }}</li>
-				<li class="list-group-item">作成日: {{ $user->created_at->format('Y/m/d H:i:s') }}</li>
-				<li class="list-group-item">更新日: {{ $user->updated_at->format('Y/m/d H:i:s') }}</li>
-			</ul>
-		</div>
+	<div class="card card-body border-light shadow-sm table-wrapper table-responsive pt-0">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>項目</th>
+					<th>値</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>名前</th>
+					<th>{{ $user->name }}</th>
+				</tr>
+				<tr>
+					<th>メールアドレス</th>
+					<th>{{ $user->email }}</th>
+				</tr>
+				<tr>
+					<th>作成日</th>
+					<th>
+						@if(isset($user->created_at))
+							{{ $user->created_at->format('Y/m/d H:i:s') }}
+						@endif
+					</th>
+				</tr>
+				<tr>
+					<th>更新日</th>
+					<th>
+						@if(isset($user->updated_at))
+							{{ $user->updated_at->format('Y/m/d H:i:s') }}
+						@endif</th>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-</div>
-@endsection
+	<td><a href="{{ url('admin/user') }}" class="btn btn-gray m-r-5"><span class="fa fa-arrow-alt-circle-left"></span> 戻る</a></td>
+	<td><a href="#" class="btn btn-success m-r-5"><span class="fa fa-edit"></span> 編集</a></td>
+@endsection​

@@ -19,6 +19,17 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    public static $store_rules = [
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => 'required|string|min:8|confirmed',
+    ];
+
+    public static $update_rules = [
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255',
+    ];
+
     /**
      * The attributes that should be hidden for arrays.
      *

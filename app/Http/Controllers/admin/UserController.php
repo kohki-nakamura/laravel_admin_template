@@ -3,6 +3,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
 	/**
@@ -36,8 +37,13 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = new User;
-        $user->fill($request->except('_token'))->save();
-        return redirect('admin/users/'.$user->id);
+		$this->validate($request, User::$store_rules);
+        User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+		return redirect('admin/users/'.$user->id);
     }
 
 	/**
@@ -75,8 +81,8 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
 		$user = User::find($id);
+		$this->validate($request, User::$update_rules);
         $user->fill($request->except('_token', '_method'))->save();
-		$user->save();
 		return redirect('admin/users/'.$id);
     }
 

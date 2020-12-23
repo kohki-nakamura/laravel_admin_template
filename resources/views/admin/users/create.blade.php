@@ -1,6 +1,14 @@
 @extends('admin.layouts.template')
 
 @section('content')
+	@if (count($errors) > 0)
+	<ul>
+		@foreach($errors->all() as $error)
+			<li class="text-danger">{{ $error }}</li>
+		@endforeach
+	</ul>
+	@endif
+
 	<div class="py-4">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
@@ -39,8 +47,8 @@
 									<!-- Form -->
 									<div class="mb-4">
 										<label for="email">Email address</label>
-										<input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}>
-										<small id="emailHelp" class="form-text text-muted" required>Well never share your email with anyone else.</small>
+										<input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}" required>
+										<small id="emailHelp" class="form-text text-muted">Well never share your email with anyone else.</small>
 									</div>
 									<!-- End of Form -->
 									<!-- Form -->

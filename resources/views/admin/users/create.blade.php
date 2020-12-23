@@ -51,6 +51,8 @@
 											<span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
 										</div>
 									</div>
+									<!-- End of Form -->
+									<!-- Form -->
 									<div class="mb-3">
 										<label for="password_confirmation">Confirm Password</label>
 										<div class="input-group">

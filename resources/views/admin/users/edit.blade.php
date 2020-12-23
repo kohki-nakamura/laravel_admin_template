@@ -33,33 +33,15 @@
 									<div class="mb-3">
 										<label for="name">Name</label>
 										<div class="input-group">
-											<input type="text" class="form-control" name="name" id="name" value="{{ $user->name }}">
+											<input type="text" class="form-control" name="name" id="name" value="{{ old('name', $user->name) }}">
 										</div>
 									</div>
 									<!-- End of Form -->
 									<!-- Form -->
 									<div class="mb-4">
 										<label for="email">Email address</label>
-										<input type="email" class="form-control" name="email" id="email" value="{{ $user->email }}">
+										<input type="email" class="form-control" name="email" id="email" value="{{ old('email', $user->email) }}">
 										<small id="emailHelp" class="form-text text-muted" required>Well never share your email with anyone else.</small>
-									</div>
-									<!-- End of Form -->
-									<!-- Form -->
-									<div class="mb-3">
-										<label for="password">Password</label>
-										<div class="input-group">
-											<input type="password" class="form-control" name="password" id="password" required>
-											<span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
-										</div>
-									</div>
-									<!-- End of Form -->
-									<!-- Form -->
-									<div class="mb-3">
-										<label for="password_confirmation">Confirm Password</label>
-										<div class="input-group">
-											<input type="password" class="form-control" name="password_confirmation" id="password" required>
-											<span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
-										</div>
 									</div>
 									<!-- End of Form -->
 							</div>

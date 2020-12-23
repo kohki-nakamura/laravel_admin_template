@@ -32,14 +32,14 @@
 									<div class="mb-3">
 										<label for="name">Name</label>
 										<div class="input-group">
-											<input type="text" class="form-control" name="name" id="name">
+											<input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}">
 										</div>
 									</div>
 									<!-- End of Form -->
 									<!-- Form -->
 									<div class="mb-4">
 										<label for="email">Email address</label>
-										<input type="email" class="form-control" name="email" id="email">
+										<input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}>
 										<small id="emailHelp" class="form-text text-muted" required>Well never share your email with anyone else.</small>
 									</div>
 									<!-- End of Form -->

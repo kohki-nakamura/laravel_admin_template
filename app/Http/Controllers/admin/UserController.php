@@ -36,10 +36,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = new User;
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->save();
+        $user->fill($request->except('_token'))->save();
         return redirect('admin/users/'.$user->id);
     }
 
@@ -78,9 +75,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
 		$user = User::find($id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $request->password;
+        $user->fill($request->except('_token', '_method'))->save();
 		$user->save();
 		return redirect('admin/users/'.$id);
     }

@@ -37,5 +37,5 @@
 		</table>
 	</div>
 	<a href="{{ action('admin\UserController@index') }}" class="btn btn-gray m-r-5"><i class="fa fa-th-list" aria-hidden="true"></i></span> 一覧</a>
-	<a href="{{ action('admin\UserController@edit', $user->id) }}" class="btn btn-success m-r-5"><span class="fa fa-edit"></span> 編集</a>
+	<a href="{{ action('admin\UserController@edit', $user) }}" class="btn btn-success m-r-5"><span class="fa fa-edit"></span> 編集</a>
 @endsection​

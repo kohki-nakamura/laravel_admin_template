@@ -65,9 +65,9 @@
 										<td>{{ $user->id }}</td>
 										<td>{{ $user->name }}</td>
 										<td>{{ $user->email }}</td>
-										<td><a href="{{ action('admin\UserController@show', $user->id) }}" class="btn btn-info m-r-5"><span class="fa fa-info"></span> 詳細</a></td>
-										<td><a href="{{ action('admin\UserController@edit', $user->id) }}" class="btn btn-success m-r-5"><span class="fa fa-edit"></span> 編集</a></td>
-										<form action="{{ action('admin\UserController@destroy', $user->id) }}" method="post">
+										<td><a href="{{ action('admin\UserController@show', $user) }}" class="btn btn-info m-r-5"><span class="fa fa-info"></span> 詳細</a></td>
+										<td><a href="{{ action('admin\UserController@edit', $user) }}" class="btn btn-success m-r-5"><span class="fa fa-edit"></span> 編集</a></td>
+										<form action="{{ action('admin\UserController@destroy', $user) }}" method="post">
 											@csrf
 											@method('DELETE')
 											<td><button type="submit" class="btn btn-danger m-r-5"><span class="fa fa-trash"></span> 削除</button></td>

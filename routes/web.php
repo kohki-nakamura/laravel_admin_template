@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => ['auth.admin']], function () {
 	//管理側トップ
 	Route::get('/admin', 'admin\TopController@show');
-	Route::resource('/admin/users', 'admin\UserController', ['only' => ['index', 'show']]);
+	Route::resource('/admin/users', 'admin\UserController');
 
 	//ログアウト実行
 	Route::post('/admin/logout', 'admin\LogoutController@logout');

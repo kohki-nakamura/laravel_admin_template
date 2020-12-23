@@ -14,7 +14,7 @@ class LoginController extends Controller
 		$user_id = $request->input("user_id");
 		$password = $request->input("password");
 		//ログイン成功
-		if($user_id == "hogehoge" && $password == "fugafuga"){
+		if($user_id == env('ADMIN_USER_ID') && $password == env('ADMIN_USER_PASSWORD')){
 			$request->session()->put("admin_auth", true);
 			return redirect("admin");
 		}

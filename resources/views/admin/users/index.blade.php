@@ -46,6 +46,9 @@
 					</div>
 			</div>
 	</div>
+	<div class="table-settings mb-4">
+		<a href="{{ action('admin\UserController@create') }}" class="btn btn-primary m-r-5"><span class="fa fa-plus"></span> 新規作成</a>
+	</div>
 	<div class="card card-body border-light shadow-sm table-wrapper table-responsive pt-0">
 			<table class="table table-hover">
 					<thead>
@@ -62,7 +65,7 @@
 										<td>{{ $user->id }}</td>
 										<td>{{ $user->name }}</td>
 										<td>{{ $user->email }}</td>
-										<td><a href="{{ action('admin\UserController@show', $user->id) }}" class="btn btn-info m-r-5"><span class="fa fa-info"></span> 詳細</a></td>
+										<td><a href="{{ action('admin\UserController@show', $user) }}" class="btn btn-info m-r-5"><span class="fa fa-info"></span> 詳細</a></td>
 										<td><a href="#" class="btn btn-success m-r-5"><span class="fa fa-edit"></span> 編集</a></td>
 										<td><a href="#" class="btn btn-danger m-r-5"><span class="fa fa-trash"></span> 削除</a></td>
 								</tr>

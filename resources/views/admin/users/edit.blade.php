@@ -20,8 +20,9 @@
 		</div>
 	</div>
 
-	<form action="{{ url('admin/users') }}" method="post">
+	<form action="{{ url('admin/users/'.$user->id) }}" method="post">
 		@csrf
+		@method('PUT')
 		<div class="row">
 				<div class="col-12 mb-4">
 					<div class="card border-light shadow-sm components-section">
@@ -32,14 +33,14 @@
 									<div class="mb-3">
 										<label for="name">Name</label>
 										<div class="input-group">
-											<input type="text" class="form-control" name="name" id="name">
+											<input type="text" class="form-control" name="name" id="name" value="{{ $user->name }}">
 										</div>
 									</div>
 									<!-- End of Form -->
 									<!-- Form -->
 									<div class="mb-4">
 										<label for="email">Email address</label>
-										<input type="email" class="form-control" name="email" id="email">
+										<input type="email" class="form-control" name="email" id="email" value="{{ $user->email }}">
 										<small id="emailHelp" class="form-text text-muted" required>Well never share your email with anyone else.</small>
 									</div>
 									<!-- End of Form -->
@@ -66,7 +67,7 @@
 					</div>
 				</div>
 				<a href="{{ action('admin\UserController@index') }}" class="btn btn-gray m-r-5"><i class="fa fa-th-list" aria-hidden="true"></i></span> 一覧</a>
-				<button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> 登録</button>
+				<button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-sync-alt"></i>  更新</button>
 			</div>
 		</div>
 	</form>

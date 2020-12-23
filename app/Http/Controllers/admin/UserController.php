@@ -78,7 +78,9 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
 		$user = User::find($id);
-		$user->fill( $request->all() );
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = $request->password;
 		$user->save();
 		return redirect('admin/users/'.$id);
     }

@@ -25,6 +25,7 @@ Route::group(['middleware' => ['auth.admin']], function () {
 	//管理側トップ
 	Route::get('/admin', 'admin\TopController@show');
 	Route::resource('/admin/users', 'admin\UserController');
+	Route::resource('/admin/samples', 'admin\SampleController');
 
 	//ログアウト実行
 	Route::post('/admin/logout', 'admin\LogoutController@logout');

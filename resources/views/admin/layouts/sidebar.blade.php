@@ -29,6 +29,12 @@
 					<span class="mt-1">ユーザー一覧</span>
 				</a>
 			</li>
+			<li class="nav-item ">
+				<a href="{{ action('admin\SampleController@index') }}" class="nav-link d-flex align-items-center">
+					<span class="sidebar-icon"><span class="fas fa-user"></span></span>
+					<span class="mt-1">サンプル一覧</span>
+				</a>
+			</li>
 			<li class="nav-item">
 				<div class="nav-link d-flex align-items-center">
 					<form method="post" action="{{ url('admin/logout') }}" id="logout">

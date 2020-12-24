@@ -28,7 +28,7 @@
 		</div>
 	</div>
 
-	<form action="{{ url('admin/users') }}" method="post">
+	{!! Form::open(['url' => action('admin\UserController@store'), 'method' => 'post']) !!}
 		@csrf
 		<div class="row">
 				<div class="col-12 mb-4">
@@ -38,33 +38,35 @@
 								<div class="col-lg-4 col-sm-6">
 									<!-- Form -->
 									<div class="mb-3">
-										<label for="name">Name</label>
+										{{ Form::label('name', 'Name') }}
 										<div class="input-group">
-											<input type="text" class="form-control" name="name" id="name" value="{{ old('name') }}">
+											{{ Form::text('name', old('name'), ['id' => 'name','class' => 'form-control', 'required' => true]) }}
 										</div>
 									</div>
 									<!-- End of Form -->
 									<!-- Form -->
 									<div class="mb-4">
-										<label for="email">Email address</label>
-										<input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}" required>
+										{{ Form::label('email', 'Email address') }}
+										<div class="input-group">
+											{{ Form::email('email', old('email'), ['id' => 'email','class' => 'form-control', 'required' => true]) }}
+										</div>
 										<small id="emailHelp" class="form-text text-muted">Well never share your email with anyone else.</small>
 									</div>
 									<!-- End of Form -->
 									<!-- Form -->
 									<div class="mb-3">
-										<label for="password">Password</label>
+										{{ Form::label('password', 'Password') }}
 										<div class="input-group">
-											<input type="password" class="form-control" name="password" id="password" required>
+											{{ Form::password('password', ['id' => 'password','class' => 'form-control', 'required' => true]) }}
 											<span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
 										</div>
 									</div>
 									<!-- End of Form -->
 									<!-- Form -->
 									<div class="mb-3">
-										<label for="password_confirmation">Confirm Password</label>
+										{{ Form::label('password_confirmation', 'Confirm Password') }}
 										<div class="input-group">
-											<input type="password" class="form-control" name="password_confirmation" id="password" required>
+											{{ Form::password('password_confirmation', ['id' => 'password_confirmation','class' => 'form-control', 'required' => true]) }}
 											<span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
 										</div>
 									</div>
@@ -76,6 +78,6 @@
 			</div>
 		</div>
 		<a href="{{ action('admin\UserController@index') }}" class="btn btn-gray m-r-5"><i class="fa fa-th-list" aria-hidden="true"></i></span> 一覧</a>
-		<button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> 登録</button>
-	</form>
+		{{ Form::button('<i class="fa fa-plus" aria-hidden="true"></i> 登録', ['class' => "btn btn-primary m-r-5", 'type' => 'submit']) }}
+	{!! Form::close() !!}
 @endsection​

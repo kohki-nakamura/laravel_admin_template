@@ -28,7 +28,7 @@
 		</div>
 	</div>
 
-	<form action="{{ url('admin/samples') }}" method="post">
+	{!! Form::open(['url' => action('admin\SampleController@store'), 'method' => 'post']) !!}
 		@csrf
 		<div class="row">
 				<div class="col-12 mb-4">
@@ -82,6 +82,6 @@
 			</div>
 		</div>
 		<a href="{{ action('admin\SampleController@index') }}" class="btn btn-gray m-r-5"><i class="fa fa-th-list" aria-hidden="true"></i></span> 一覧</a>
-		<button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> 登録</button>
-	</form>
+		{{ Form::button('<i class="fa fa-plus" aria-hidden="true"></i> 登録', ['class' => "btn btn-primary m-r-5", 'type' => 'submit']) }}
+	{!! Form::close() !!}
 @endsection​

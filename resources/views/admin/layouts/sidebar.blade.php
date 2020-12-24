@@ -31,7 +31,7 @@
 			</li>
 			<li class="nav-item ">
 				<a href="{{ action('admin\SampleController@index') }}" class="nav-link d-flex align-items-center">
-					<span class="sidebar-icon"><span class="fas fa-user"></span></span>
+					<span class="sidebar-icon"><i class="fa fa-bolt" aria-hidden="true"></i></span>
 					<span class="mt-1">サンプル一覧</span>
 				</a>
 			</li>

@@ -84,7 +84,7 @@ class UserController extends Controller
     $user = User::find($id);
     $this->validate($request, User::$update_rules);
     $user->fill($request->except('_token', '_method'))->save();
-  return redirect('admin/users/'.$id);
+    return redirect('admin/users/'.$id);
   }
 
   /**

@@ -1,13 +1,7 @@
 @extends('admin.layouts.template')
 
 @section('content')
-	@if (count($errors) > 0)
-	<ul>
-		@foreach($errors->all() as $error)
-			<li class="text-danger">{{ $error }}</li>
-		@endforeach
-	</ul>
-	@endif
+	@include('admin.layouts.error_message')
 
 	<div class="py-4">
 		<nav aria-label="breadcrumb">

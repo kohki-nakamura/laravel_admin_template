@@ -1,6 +1,8 @@
 @extends('admin.layouts.template')
 
 @section('content')
+	@include('admin.layouts.error_message')
+
 	<div class="py-4">
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">

@@ -40,7 +40,7 @@
 									<div class="mb-3">
 										{{ Form::label('title', 'Title') }}
 										<div class="input-group">
-											{{ Form::input('text', 'title', old('title'), ['id' => 'title','class' => 'form-control']) }}
+											{{ Form::text('title', old('title'), ['id' => 'title','class' => 'form-control']) }}
 										</div>
 									</div>
 									<!-- End of Form -->
@@ -49,7 +49,7 @@
 									<div class="mb-3">
 										{{ Form::label('content', 'Content') }}
 										<div class="input-group">
-											{{ Form::input('text', 'content', old('content'), ['id' => 'content','class' => 'form-control']) }}
+											{{ Form::textarea('content', old('content'), ['id' => 'content','class' => 'form-control']) }}
 										</div>
 									</div>
 									<!-- End of Form -->

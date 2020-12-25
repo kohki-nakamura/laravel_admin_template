@@ -54,8 +54,8 @@
 					<thead>
 							<tr>
 									<th>ID</th>
-									<th>名前</th>
-									<th>メールアドレス</th>
+									<th>タイトル</th>
+									<th>内容</th>
 									<td>公開設定</td>
 									<th colspan="3"></th>
 							</tr>

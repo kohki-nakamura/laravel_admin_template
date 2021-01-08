@@ -38,8 +38,16 @@ class SampleController extends Controller
     public function store(Request $request)
     {
         $sample = new Sample;
+        $sample->fill($request->except('_token'));
+
+        if ($request->hasFile('header_image') && $request->file('header_image')->isValid([])) {
+            // ファイル名をユニークにして public/uploads/sample 配下に保存
+            $path = $request->header_image->store('public/uploads/sample');
+            $sample->header_image = basename($path);
+        }
+
         $this->validate($request, Sample::$rules);
-        $sample->fill($request->except('_token'))->save();
+        $sample->save();
         return redirect('admin/samples/'.$sample->id);
     }
 
@@ -80,7 +88,18 @@ class SampleController extends Controller
     {
         $sample = Sample::find($id);
         $this->validate($request, Sample::$rules);
-        $sample->fill($request->except('_token', '_method'))->save();
+
+        if ($request->hasFile('header_image') && $request->file('header_image')->isValid([])) {
+            $sample->fill($request->except('_token', '_method'));
+            // ファイル名をユニークにして public/uploads/sample 配下に保存
+            $path = $request->header_image->store('public/uploads/sample');
+            $sample->header_image = basename($path);
+        } else {
+            // header_imageがない場合はfillableから除外
+            $sample->fill($request->except('_token', '_method', 'header_image'));
+        }
+
+        $sample->save();
         return redirect('admin/samples/'.$sample->id);
     }
 

@@ -11,6 +11,14 @@
 			</thead>
 			<tbody>
 				<tr>
+					<th>ヘッダー画像</th>
+					<th>
+						@isset ($sample->header_image)
+							<img src="{{ asset('storage/uploads/sample/'.$sample->header_image) }}">
+						@endisset
+					</th>
+				</tr>
+				<tr>
 					<th>タイトル</th>
 					<th>{{ $sample->title }}</th>
 				</tr>

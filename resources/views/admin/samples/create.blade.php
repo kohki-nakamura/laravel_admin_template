@@ -22,7 +22,7 @@
 		</div>
 	</div>
 
-	{!! Form::open(['url' => action('admin\SampleController@store'), 'method' => 'post']) !!}
+	{!! Form::open(['url' => action('admin\SampleController@store'), 'method' => 'post', 'enctype' => 'multipart/form-data']) !!}
 		@csrf
 		<div class="row">
 				<div class="col-12 mb-4">
@@ -30,6 +30,16 @@
 						<div class="card-body">
 							<div class="row mb-4">
 								<div class="col-lg-4 col-sm-6">
+									<!-- Form -->
+									<div class="form-file mb-3">
+										{{ Form::file('header_image', ['id' => 'header_image', 'class' => 'form-file-input', 'accept' => 'image/png, image/jpeg']) }}
+										<label class="form-file-label" for="header_image">
+											<span class="form-file-text">Choose file...</span>
+											<span class="form-file-button">Browse</span>
+										</label>
+									</div>
+									<!-- End of Form -->
+
 									<!-- Form -->
 									<div class="mb-3">
 										{{ Form::label('title', 'Title') }}

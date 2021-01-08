@@ -18,6 +18,7 @@ class CreateSamplesTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->boolean('is_public')->default(false);
+            $table->string('header_image')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });
